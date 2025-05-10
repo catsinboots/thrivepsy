@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Menu, X, Flare, BookOpen } from 'lucide-react';
+import { Menu, X, Flame, BookOpen } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
@@ -12,7 +12,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <Flare className="h-8 w-8 text-amber-500 mr-3" />
+            <Flame className="h-8 w-8 text-amber-500 mr-3" />
             <a href="/" className="text-xl font-bold font-['Poppins'] tracking-wide text-amber-950">
               Thrive <span className="text-amber-500">Psychology</span>
             </a>

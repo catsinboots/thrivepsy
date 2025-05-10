@@ -1,5 +1,5 @@
 
-import { Mail, MapPin, Phone, Flare, Instagram, Twitter, Facebook } from 'lucide-react';
+import { Mail, MapPin, Phone, Flame, Instagram, Twitter, Facebook } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <h3 className="flex items-center text-2xl font-['Poppins'] font-bold mb-4">
-              <Flare className="h-6 w-6 mr-2" /> Thrive Psychology
+              <Flame className="h-6 w-6 mr-2" /> Thrive Psychology
             </h3>
             <p className="text-amber-900/90 mb-4">
               Your go-to platform to find the best psychology programs based on your CUET-PG score. Personalized matches for your academic journey.
