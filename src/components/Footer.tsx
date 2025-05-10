@@ -1,55 +1,57 @@
 
 import { Mail, MapPin, Phone, Flame, Instagram, Twitter, Facebook } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-amber-500 to-yellow-400 text-amber-950 rounded-t-[40px] mt-16 pt-10 pb-4 shadow-[0_-4px_20px_rgba(251,191,36,0.25)]">
+    <footer className="bg-black/80 backdrop-blur-md text-gray-300 rounded-t-[40px] mt-16 pt-10 pb-4 shadow-[0_-4px_20px_rgba(0,0,0,0.3)] border-t border-amber-900/20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="py-6 grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Company Info */}
           <div>
-            <h3 className="flex items-center text-2xl font-['Poppins'] font-bold mb-4">
-              <Flame className="h-6 w-6 mr-2" /> Thrive Psychology
+            <h3 className="flex items-center text-2xl font-['Poppins'] font-bold mb-4 text-white">
+              <Flame className="h-6 w-6 text-amber-500 mr-2" /> Thrive Psychology
             </h3>
-            <p className="text-amber-900/90 mb-4">
-              Your go-to platform to find the best psychology programs based on your CUET-PG score. Personalized matches for your academic journey.
+            <p className="text-gray-400 mb-4">
+              Your go-to platform to find the best psychology programs and build your career path from Class 12 to PhD and beyond.
             </p>
           </div>
           
           {/* Quick Links */}
           <div>
-            <h4 className="text-xl font-['Poppins'] font-bold mb-4 text-amber-900/90">Quick Links</h4>
+            <h4 className="text-xl font-['Poppins'] font-bold mb-4 text-amber-500">Quick Links</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-amber-900/90 hover:text-amber-950 transition-colors">Home</a></li>
-              <li><a href="#finder" className="text-amber-900/90 hover:text-amber-950 transition-colors">Find Programs</a></li>
-              <li><a href="#results" className="text-amber-900/90 hover:text-amber-950 transition-colors">Results</a></li>
-              <li><a href="https://undraw.co/" target="_blank" rel="noopener noreferrer" className="text-amber-900/90 hover:text-amber-950 transition-colors">Illustrations by unDraw</a></li>
+              <li><Link to="/" className="text-gray-400 hover:text-amber-400 transition-colors">Home</Link></li>
+              <li><Link to="/career-pathways" className="text-gray-400 hover:text-amber-400 transition-colors">Career Pathways</Link></li>
+              <li><Link to="/colleges" className="text-gray-400 hover:text-amber-400 transition-colors">College Database</Link></li>
+              <li><Link to="/entrance-exams" className="text-gray-400 hover:text-amber-400 transition-colors">Entrance Exams</Link></li>
+              <li><Link to="/syllabus" className="text-gray-400 hover:text-amber-400 transition-colors">Syllabus Archive</Link></li>
             </ul>
           </div>
           
           {/* Contact Info */}
           <div id="contact">
-            <h4 className="text-xl font-['Poppins'] font-bold mb-4 text-amber-900/90">Contact Us</h4>
-            <p className="text-amber-900/90 mb-2">
-              Email: <a href="mailto:hello@thrivepsychology.com" className="font-semibold hover:text-amber-950 transition-colors">hello@thrivepsychology.com</a>
+            <h4 className="text-xl font-['Poppins'] font-bold mb-4 text-amber-500">Contact Us</h4>
+            <p className="text-gray-400 mb-2">
+              Email: <a href="mailto:hello@thrivepsychology.com" className="font-semibold text-amber-400 hover:text-amber-300 transition-colors">hello@thrivepsychology.com</a>
             </p>
-            <p className="text-amber-900/90 mb-4">Connect with us:</p>
+            <p className="text-gray-400 mb-4">Connect with us:</p>
             <div className="flex space-x-4">
-              <a href="https://twitter.com/" target="_blank" aria-label="Twitter" rel="noopener noreferrer" className="bg-amber-950/10 p-2 rounded-full hover:bg-amber-950/20 transition-colors">
-                <Twitter className="h-5 w-5" />
+              <a href="https://twitter.com/" target="_blank" aria-label="Twitter" rel="noopener noreferrer" className="bg-amber-900/10 p-2 rounded-full hover:bg-amber-900/20 transition-colors">
+                <Twitter className="h-5 w-5 text-amber-400" />
               </a>
-              <a href="https://facebook.com/" target="_blank" aria-label="Facebook" rel="noopener noreferrer" className="bg-amber-950/10 p-2 rounded-full hover:bg-amber-950/20 transition-colors">
-                <Facebook className="h-5 w-5" />
+              <a href="https://facebook.com/" target="_blank" aria-label="Facebook" rel="noopener noreferrer" className="bg-amber-900/10 p-2 rounded-full hover:bg-amber-900/20 transition-colors">
+                <Facebook className="h-5 w-5 text-amber-400" />
               </a>
-              <a href="https://instagram.com/" target="_blank" aria-label="Instagram" rel="noopener noreferrer" className="bg-amber-950/10 p-2 rounded-full hover:bg-amber-950/20 transition-colors">
-                <Instagram className="h-5 w-5" />
+              <a href="https://instagram.com/" target="_blank" aria-label="Instagram" rel="noopener noreferrer" className="bg-amber-900/10 p-2 rounded-full hover:bg-amber-900/20 transition-colors">
+                <Instagram className="h-5 w-5 text-amber-400" />
               </a>
             </div>
           </div>
         </div>
         
-        <div className="py-6 border-t border-amber-600/20 text-center">
-          <p className="text-amber-900/90">
+        <div className="py-6 border-t border-amber-900/20 text-center">
+          <p className="text-gray-500">
             &copy; {new Date().getFullYear()} Thrive Psychology. All rights reserved.
           </p>
         </div>

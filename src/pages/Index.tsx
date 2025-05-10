@@ -1,11 +1,10 @@
 
 import { useEffect, useState } from "react";
-import Header from "@/components/Header";
+import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
 import CollegeFinder from "@/components/CollegeFinder";
 import CollegeResults from "@/components/CollegeResults";
 import CollegeModal from "@/components/CollegeModal";
-import Footer from "@/components/Footer";
 import { College } from "@/types/college";
 
 const Index = () => {
@@ -116,26 +115,22 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#eaf1fb]">
-      <Header />
-      <main className="flex-grow">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-8">
-          <Hero />
-          <CollegeFinder onSearch={handleSearch} />
-          <CollegeResults 
-            colleges={filteredColleges} 
-            score={userScore} 
-            onViewDetails={openModal}
-          />
-        </div>
-      </main>
+    <Layout>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+        <Hero />
+        <CollegeFinder onSearch={handleSearch} />
+        <CollegeResults 
+          colleges={filteredColleges} 
+          score={userScore} 
+          onViewDetails={openModal}
+        />
+      </div>
       <CollegeModal 
         isOpen={isModalOpen} 
         onClose={closeModal} 
         college={selectedCollege} 
       />
-      <Footer />
-    </div>
+    </Layout>
   );
 };
 
