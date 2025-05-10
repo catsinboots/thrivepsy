@@ -2,13 +2,10 @@
 import { useState, useEffect } from "react";
 import { College } from "@/types/college";
 import { Button } from "@/components/ui/button";
-import { Filter, Map, Star, Share2, List, Grid, ChevronDown } from "lucide-react";
+import { Filter, Map, Star, Share2, List, Grid, ChevronDown, Search } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator } from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
-
-// Install framer-motion dependency
-// <lov-add-dependency>framer-motion@latest</lov-add-dependency>
 
 interface CollegeResultsProps {
   colleges: College[];
