@@ -1,5 +1,6 @@
+
 import Layout from "@/components/Layout";
-import { BookOpen, Clock, Award, PenTool, Scale, Star, CheckCircle, Brain, ChartBar, Clipboard, Heart, Lightbulb } from "lucide-react";
+import { BookOpen, Clock, Award, PenTool, Scale, Star, CheckCircle, Clipboard, Brain as BrainIcon, ChartBar as ChartBarIcon, Heart as HeartIcon, Lightbulb as LightbulbIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Courses = () => {
@@ -168,7 +169,7 @@ const featuredCourses = [
     rating: "4.8",
     isFree: false,
     featured: true,
-    icon: Brain
+    icon: BrainIcon
   },
   {
     title: "Research Methods in Psychology",
@@ -190,7 +191,7 @@ const featuredCourses = [
     rating: "4.9",
     isFree: false,
     featured: true,
-    icon: ChartBar
+    icon: ChartBarIcon
   },
   {
     title: "Basics of Counseling Psychology",
@@ -201,7 +202,7 @@ const featuredCourses = [
     rating: "4.6",
     isFree: false,
     featured: false,
-    icon: Heart
+    icon: HeartIcon
   },
   {
     title: "Introduction to Psychological Testing",
@@ -212,7 +213,7 @@ const featuredCourses = [
     rating: "4.7",
     isFree: false,
     featured: false,
-    icon: ClipboardCheck
+    icon: Clipboard
   },
   {
     title: "Psychology of Learning",
@@ -222,7 +223,7 @@ const featuredCourses = [
     rating: "4.5",
     isFree: true,
     featured: false,
-    icon: Lightbulb
+    icon: LightbulbIcon
   }
 ];
 
@@ -285,11 +286,5 @@ const certificateCourses = [
     description: "Learn to apply positive psychology principles to enhance well-being and resilience."
   }
 ];
-
-// Missing icons to be defined
-const Brain = BookOpen; // Placeholder for Brain icon
-const ChartBar = Award; // Placeholder for ChartBar icon
-const ClipboardCheck = Clipboard; // Using Clipboard as a replacement for ClipboardCheck
-const Lightbulb = Star; // Placeholder for Lightbulb icon
 
 export default Courses;
