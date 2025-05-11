@@ -1,3 +1,4 @@
+
 import { FileText, Download, ArrowRight, BookOpen, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -19,7 +20,7 @@ const SyllabusArchive = () => {
     toast({
       title: "Download started",
       description: `Downloading ${item}`,
-      variant: "success",
+      variant: "default", // Changed from "success" to "default"
     });
   };
 

@@ -1,3 +1,4 @@
+
 import Layout from "@/components/Layout";
 import { BookOpen, Download, ShoppingBag, FileText, ArrowRight, Tag, ExternalLink, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -13,7 +14,7 @@ const Resources = () => {
     toast({
       title: "Download started",
       description: `Downloading ${item}`,
-      variant: "success",
+      variant: "default", // Changed from "success" to "default"
     });
   };
   
@@ -21,7 +22,7 @@ const Resources = () => {
     toast({
       title: "Item added to cart",
       description: `${item} has been added to your cart`,
-      variant: "success",
+      variant: "default", // Changed from "success" to "default" 
     });
   };
   
