@@ -1,6 +1,4 @@
-
 import { useEffect, useState } from "react";
-import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
 import CollegeFinder from "@/components/CollegeFinder";
 import CollegeResults from "@/components/CollegeResults";
@@ -115,22 +113,20 @@ const Index = () => {
   };
 
   return (
-    <Layout>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-8">
-        <Hero />
-        <CollegeFinder onSearch={handleSearch} />
-        <CollegeResults 
-          colleges={filteredColleges} 
-          score={userScore} 
-          onViewDetails={openModal}
-        />
-      </div>
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <Hero />
+      <CollegeFinder onSearch={handleSearch} />
+      <CollegeResults 
+        colleges={filteredColleges} 
+        score={userScore} 
+        onViewDetails={openModal}
+      />
       <CollegeModal 
         isOpen={isModalOpen} 
         onClose={closeModal} 
         college={selectedCollege} 
       />
-    </Layout>
+    </div>
   );
 };
 
