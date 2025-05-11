@@ -118,7 +118,9 @@ const Index = () => {
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       <ResourcePopup />
       <Hero />
-      <CollegeFinder onSearch={handleSearch} />
+      <div id="finder" className="scroll-mt-24">
+        <CollegeFinder onSearch={handleSearch} />
+      </div>
       <CollegeResults 
         colleges={filteredColleges} 
         score={userScore} 
