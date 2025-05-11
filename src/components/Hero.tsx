@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section 
       className="pt-28 pb-16 md:pt-32 bg-cover bg-center relative"
-      style={{ backgroundImage: "linear-gradient(rgba(0, 86, 210, 0.8), rgba(30, 73, 118, 0.8)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80')" }}
+      style={{ backgroundImage: "linear-gradient(rgba(42, 115, 204, 0.85), rgba(0, 86, 210, 0.85)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80')" }}
     >
       <div className="absolute inset-0 bg-gradient-to-r from-coursera-navy/90 to-coursera-blue/70"></div>
       

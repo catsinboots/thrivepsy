@@ -1,6 +1,4 @@
-
 import { useState } from "react";
-import Layout from "@/components/Layout";
 import { MessageSquare, Users, HelpCircle, FileQuestion, ChevronDown, ChevronUp, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -20,199 +18,197 @@ const Support = () => {
   };
   
   return (
-    <Layout>
-      <div className="page-container">
-        <h1 className="page-title">Student <span className="gradient-text">Support</span> Hub</h1>
-        <p className="page-subtitle">Get guidance, connect with mentors, and access resources to support your psychology journey.</p>
-        
-        {/* Support Options */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-          {supportOptions.map((option) => (
-            <div key={option.title} className="glass-card p-6 text-center hover:border-amber-500/30 transition-all">
-              <div className="bg-amber-500/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <option.icon className="h-8 w-8 text-amber-500" />
-              </div>
-              <h3 className="font-bold text-white mb-2">{option.title}</h3>
-              <p className="text-sm text-gray-400">{option.description}</p>
-              <Button className="mt-4 bg-amber-500/10 hover:bg-amber-500/20 text-amber-400">
-                {option.buttonText}
-              </Button>
+    <div className="page-container">
+      <h1 className="page-title">Student <span className="gradient-text">Support</span> Hub</h1>
+      <p className="page-subtitle">Get guidance, connect with mentors, and access resources to support your psychology journey.</p>
+      
+      {/* Support Options */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+        {supportOptions.map((option) => (
+          <div key={option.title} className="coursera-card p-6 text-center hover:shadow-md transition-all">
+            <div className="bg-coursera-blue/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <option.icon className="h-8 w-8 text-coursera-blue" />
             </div>
-          ))}
-        </div>
+            <h3 className="font-bold text-coursera-navy mb-2">{option.title}</h3>
+            <p className="text-sm text-gray-600">{option.description}</p>
+            <Button className="mt-4 bg-coursera-blue hover:bg-coursera-darkBlue text-white">
+              {option.buttonText}
+            </Button>
+          </div>
+        ))}
+      </div>
+      
+      {/* Internship Opportunities */}
+      <div className="mb-16">
+        <h2 className="text-2xl font-bold mb-6 text-coursera-navy flex items-center">
+          <Users className="h-6 w-6 mr-2 text-coursera-blue" />
+          Internship Opportunities
+        </h2>
         
-        {/* Internship Opportunities */}
-        <div className="mb-16">
-          <h2 className="text-2xl font-bold mb-6 text-white flex items-center">
-            <Users className="h-6 w-6 mr-2 text-amber-500" />
-            Internship Opportunities
-          </h2>
+        <div className="coursera-card p-6">
+          <div className="mb-6">
+            <p className="text-gray-600 mb-4">
+              Explore psychology internship and volunteer opportunities crowdsourced from our community.
+            </p>
+          </div>
           
-          <div className="glass-card p-6">
-            <div className="mb-6">
-              <p className="text-gray-300 mb-4">
-                Explore psychology internship and volunteer opportunities crowdsourced from our community.
-              </p>
-            </div>
-            
-            <div className="space-y-6">
-              {internships.map((internship) => (
-                <div key={internship.title} className="bg-amber-900/10 p-5 rounded-lg">
-                  <div className="flex justify-between items-start mb-3">
-                    <h3 className="font-bold text-white">{internship.title}</h3>
-                    <span className={`text-xs px-2 py-1 rounded-full ${
-                      internship.type === "Paid" 
-                        ? "bg-green-500/20 text-green-400" 
-                        : "bg-blue-500/20 text-blue-400"
-                    }`}>
-                      {internship.type}
-                    </span>
-                  </div>
-                  
-                  <div className="mb-3 text-sm text-gray-300">
-                    <div><span className="text-amber-400">Organization:</span> {internship.organization}</div>
-                    <div><span className="text-amber-400">Location:</span> {internship.location}</div>
-                    <div><span className="text-amber-400">Duration:</span> {internship.duration}</div>
-                    <div><span className="text-amber-400">Last Date to Apply:</span> {internship.lastDate}</div>
-                  </div>
-                  
-                  <p className="text-sm text-gray-400 mb-4">{internship.description}</p>
-                  
-                  <Button className="bg-amber-500 hover:bg-amber-600 text-amber-950">
-                    Apply Now
-                  </Button>
+          <div className="space-y-6">
+            {internships.map((internship) => (
+              <div key={internship.title} className="bg-coursera-lightGray p-5 rounded-lg">
+                <div className="flex justify-between items-start mb-3">
+                  <h3 className="font-bold text-coursera-navy">{internship.title}</h3>
+                  <span className={`text-xs px-2 py-1 rounded-full ${
+                    internship.type === "Paid" 
+                      ? "bg-green-100 text-green-600" 
+                      : "bg-blue-100 text-blue-600"
+                  }`}>
+                    {internship.type}
+                  </span>
                 </div>
-              ))}
-            </div>
-            
-            <div className="mt-8 text-center">
-              <Button variant="outline" className="border-amber-500/20 hover:bg-amber-500/10 text-amber-400">
-                View All Opportunities
-              </Button>
-            </div>
+                
+                <div className="mb-3 text-sm text-gray-600">
+                  <div><span className="text-coursera-blue">Organization:</span> {internship.organization}</div>
+                  <div><span className="text-coursera-blue">Location:</span> {internship.location}</div>
+                  <div><span className="text-coursera-blue">Duration:</span> {internship.duration}</div>
+                  <div><span className="text-coursera-blue">Last Date to Apply:</span> {internship.lastDate}</div>
+                </div>
+                
+                <p className="text-sm text-gray-600 mb-4">{internship.description}</p>
+                
+                <Button className="bg-coursera-blue hover:bg-coursera-darkBlue text-white">
+                  Apply Now
+                </Button>
+              </div>
+            ))}
+          </div>
+          
+          <div className="mt-8 text-center">
+            <Button variant="outline" className="border-coursera-blue/20 hover:bg-coursera-blue/10 text-coursera-blue">
+              View All Opportunities
+            </Button>
           </div>
         </div>
+      </div>
+      
+      {/* FAQ Section */}
+      <div className="mb-16">
+        <h2 className="text-2xl font-bold mb-6 text-coursera-navy flex items-center">
+          <HelpCircle className="h-6 w-6 mr-2 text-coursera-blue" />
+          Frequently Asked Questions
+        </h2>
         
-        {/* FAQ Section */}
-        <div className="mb-16">
-          <h2 className="text-2xl font-bold mb-6 text-white flex items-center">
-            <HelpCircle className="h-6 w-6 mr-2 text-amber-500" />
-            Frequently Asked Questions
-          </h2>
-          
-          <div className="glass-card p-6">
-            <div className="space-y-4">
-              {faqs.map((faq) => (
-                <div 
-                  key={faq.id} 
-                  className={`bg-amber-900/10 rounded-lg overflow-hidden ${openFaqId === faq.id ? 'border border-amber-500/20' : ''}`}
+        <div className="coursera-card p-6">
+          <div className="space-y-4">
+            {faqs.map((faq) => (
+              <div 
+                key={faq.id} 
+                className={`bg-coursera-lightGray rounded-lg overflow-hidden ${openFaqId === faq.id ? 'border border-coursera-blue/20' : ''}`}
+              >
+                <button 
+                  className="w-full p-4 flex justify-between items-center text-left focus:outline-none"
+                  onClick={() => toggleFaq(faq.id)}
                 >
-                  <button 
-                    className="w-full p-4 flex justify-between items-center text-left focus:outline-none"
-                    onClick={() => toggleFaq(faq.id)}
-                  >
-                    <h3 className="font-bold text-white">{faq.question}</h3>
-                    {openFaqId === faq.id ? (
-                      <ChevronUp className="h-5 w-5 text-amber-500" />
-                    ) : (
-                      <ChevronDown className="h-5 w-5 text-amber-500" />
-                    )}
-                  </button>
-                  
-                  {openFaqId === faq.id && (
-                    <div className="p-4 pt-0 border-t border-amber-900/20">
-                      <p className="text-gray-300">{faq.answer}</p>
-                    </div>
+                  <h3 className="font-bold text-coursera-navy">{faq.question}</h3>
+                  {openFaqId === faq.id ? (
+                    <ChevronUp className="h-5 w-5 text-coursera-blue" />
+                  ) : (
+                    <ChevronDown className="h-5 w-5 text-coursera-blue" />
                   )}
-                </div>
-              ))}
-            </div>
+                </button>
+                
+                {openFaqId === faq.id && (
+                  <div className="p-4 pt-0 border-t border-gray-200">
+                    <p className="text-gray-700">{faq.answer}</p>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
+      </div>
+      
+      {/* Contact Form */}
+      <div className="mb-12">
+        <h2 className="text-2xl font-bold mb-6 text-coursera-navy flex items-center">
+          <MessageSquare className="h-6 w-6 mr-2 text-coursera-blue" />
+          Get in Touch
+        </h2>
         
-        {/* Contact Form */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-white flex items-center">
-            <MessageSquare className="h-6 w-6 mr-2 text-amber-500" />
-            Get in Touch
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="glass-card p-6">
-              <h3 className="font-bold text-lg text-white mb-4">Send Us a Message</h3>
-              
-              <div className="space-y-4">
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-amber-400 mb-1">
-                    Your Email
-                  </label>
-                  <Input
-                    id="email"
-                    type="email"
-                    className="bg-white/5 border-white/10 text-white"
-                    placeholder="your.email@example.com"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-amber-400 mb-1">
-                    Message
-                  </label>
-                  <Textarea
-                    id="message"
-                    className="bg-white/5 border-white/10 text-white min-h-32"
-                    placeholder="Type your message here..."
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                  />
-                </div>
-                
-                <Button className="w-full bg-amber-500 hover:bg-amber-600 text-amber-950">
-                  <Send className="h-4 w-4 mr-2" />
-                  Send Message
-                </Button>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="coursera-card p-6">
+            <h3 className="font-bold text-lg text-coursera-navy mb-4">Send Us a Message</h3>
+            
+            <div className="space-y-4">
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                  Your Email
+                </label>
+                <Input
+                  id="email"
+                  type="email"
+                  className="bg-white border-gray-200 text-gray-700"
+                  placeholder="your.email@example.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
               </div>
+              
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                  Message
+                </label>
+                <Textarea
+                  id="message"
+                  className="bg-white border-gray-200 text-gray-700 min-h-32"
+                  placeholder="Type your message here..."
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                />
+              </div>
+              
+              <Button className="w-full bg-coursera-blue hover:bg-coursera-darkBlue text-white">
+                <Send className="h-4 w-4 mr-2" />
+                Send Message
+              </Button>
+            </div>
+          </div>
+          
+          <div className="coursera-card p-6">
+            <h3 className="font-bold text-lg text-coursera-navy mb-4">Join Our Community</h3>
+            
+            <p className="text-gray-600 mb-6">
+              Connect with fellow psychology students and professionals in our community forums and social media groups.
+            </p>
+            
+            <div className="space-y-4">
+              {communityLinks.map((link) => (
+                <a 
+                  key={link.name}
+                  href={link.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex items-center p-3 bg-coursera-lightGray rounded-lg hover:bg-gray-100 transition-colors"
+                >
+                  <link.icon className="h-6 w-6 text-coursera-blue mr-3" />
+                  <div>
+                    <div className="font-medium text-coursera-navy">{link.name}</div>
+                    <div className="text-xs text-gray-500">{link.members} members</div>
+                  </div>
+                  <ChevronRight className="ml-auto h-5 w-5 text-coursera-blue" />
+                </a>
+              ))}
             </div>
             
-            <div className="glass-card p-6">
-              <h3 className="font-bold text-lg text-white mb-4">Join Our Community</h3>
-              
-              <p className="text-gray-300 mb-6">
-                Connect with fellow psychology students and professionals in our community forums and social media groups.
-              </p>
-              
-              <div className="space-y-4">
-                {communityLinks.map((link) => (
-                  <a 
-                    key={link.name}
-                    href={link.url} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="flex items-center p-3 bg-amber-900/10 rounded-lg hover:bg-amber-900/20 transition-colors"
-                  >
-                    <link.icon className="h-6 w-6 text-amber-500 mr-3" />
-                    <div>
-                      <div className="font-medium text-white">{link.name}</div>
-                      <div className="text-xs text-gray-400">{link.members} members</div>
-                    </div>
-                    <ChevronRight className="ml-auto h-5 w-5 text-amber-500" />
-                  </a>
-                ))}
-              </div>
-              
-              <div className="mt-6">
-                <Button variant="outline" className="w-full border-amber-500/20 hover:bg-amber-500/10 text-amber-400">
-                  <Users className="h-4 w-4 mr-2" />
-                  Explore All Communities
-                </Button>
-              </div>
+            <div className="mt-6">
+              <Button variant="outline" className="w-full border-coursera-blue/20 hover:bg-coursera-blue/10 text-coursera-blue">
+                <Users className="h-4 w-4 mr-2" />
+                Explore All Communities
+              </Button>
             </div>
           </div>
         </div>
       </div>
-    </Layout>
+    </div>
   );
 };
 
