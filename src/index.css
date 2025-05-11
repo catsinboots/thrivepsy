@@ -1,10 +1,53 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 214 79% 47%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 13% 91%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 220 13% 91%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 214 79% 47%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 222 47% 11%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 214 79% 47%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 213 94% 68%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 222 47% 20%;
+    --sidebar-ring: 214 79% 47%;
+  }
+
+  .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
 
@@ -14,8 +57,8 @@
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 40 90% 50%;
-    --primary-foreground: 30 10% 15%;
+    --primary: 214 79% 47%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
@@ -23,32 +66,21 @@
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
 
-    --accent: 40 90% 50%; 
-    --accent-foreground: 30 10% 15%;
+    --accent: 214 79% 47%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
-    --ring: 40 90% 50%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 240 10% 5.9%;
-    --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 40 90% 50%;
-    --sidebar-primary-foreground: 45 10% 15%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 40 90% 50%;
+    --ring: 214 79% 47%;
   }
 }
 
 @layer base {
   * {
-    @apply border-border selection:bg-amber-500/10 selection:text-amber-200;
+    @apply border-border selection:bg-coursera-blue/10 selection:text-coursera-blue;
   }
 
   body {
@@ -67,7 +99,7 @@
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl font-bold text-center mb-8;
+    @apply text-3xl md:text-4xl font-bold text-center mb-8 font-heading;
   }
   
   .section-subtitle {
@@ -75,15 +107,15 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-amber-500 to-yellow-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-coursera-blue to-coursera-lightBlue bg-clip-text text-transparent;
   }
   
   .glass-card {
-    @apply backdrop-blur-sm bg-white/5 border border-white/10 rounded-xl shadow-lg;
+    @apply bg-white shadow-md border border-gray-100 rounded-xl;
   }
   
   .nav-link {
-    @apply px-3 py-2 text-sm font-medium text-gray-300 hover:text-amber-400 transition-colors;
+    @apply px-3 py-2 text-sm font-medium text-gray-700 hover:text-coursera-blue transition-colors;
   }
 
   .page-container {
@@ -91,11 +123,23 @@
   }
   
   .page-title {
-    @apply text-4xl md:text-5xl font-bold mb-6 text-white;
+    @apply text-4xl md:text-5xl font-bold mb-6 text-coursera-black font-heading;
   }
   
   .page-subtitle {
-    @apply text-xl text-gray-300 max-w-3xl mb-12;
+    @apply text-xl text-gray-600 max-w-3xl mb-12;
+  }
+  
+  .coursera-card {
+    @apply bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+  
+  .coursera-button-primary {
+    @apply bg-coursera-blue text-white font-medium rounded-md px-4 py-2 hover:bg-coursera-darkBlue transition-colors;
+  }
+  
+  .coursera-button-secondary {
+    @apply bg-white border border-coursera-blue text-coursera-blue font-medium rounded-md px-4 py-2 hover:bg-blue-50 transition-colors;
   }
 }
 
@@ -114,11 +158,11 @@
 }
 
 .logo:hover {
-  filter: drop-shadow(0 0 2em #fbbf24aa);
+  filter: drop-shadow(0 0 2em rgba(42, 115, 204, 0.5));
 }
 
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #fbbf24aa);
+  filter: drop-shadow(0 0 2em rgba(42, 115, 204, 0.5));
 }
 
 @keyframes logo-spin {

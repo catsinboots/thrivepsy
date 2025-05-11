@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,6 +19,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Inter', 'system-ui', 'sans-serif'],
+				heading: ['Source Sans Pro', 'Inter', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -51,6 +56,16 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+				coursera: {
+					blue: '#2A73CC',
+					lightBlue: '#0056D2',
+					darkBlue: '#1E4976',
+					navy: '#1A1F2C',
+					black: '#1F1F1F',
+					gray: '#8E9196',
+					lightGray: '#F3F3F3',
+					white: '#FFFFFF',
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',

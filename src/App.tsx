@@ -13,6 +13,7 @@ import SyllabusArchive from "./pages/SyllabusArchive";
 import Courses from "./pages/Courses";
 import Resources from "./pages/Resources";
 import Support from "./pages/Support";
+import Layout from "./components/Layout";
 
 const queryClient = new QueryClient();
 
@@ -22,17 +23,19 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/career-pathways" element={<CareerPathways />} />
-          <Route path="/colleges" element={<CollegeDatabase />} />
-          <Route path="/entrance-exams" element={<EntranceExams />} />
-          <Route path="/syllabus" element={<SyllabusArchive />} />
-          <Route path="/courses" element={<Courses />} />
-          <Route path="/resources" element={<Resources />} />
-          <Route path="/support" element={<Support />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/career-pathways" element={<CareerPathways />} />
+            <Route path="/colleges" element={<CollegeDatabase />} />
+            <Route path="/entrance-exams" element={<EntranceExams />} />
+            <Route path="/syllabus" element={<SyllabusArchive />} />
+            <Route path="/courses" element={<Courses />} />
+            <Route path="/resources" element={<Resources />} />
+            <Route path="/support" element={<Support />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Layout>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
