@@ -1,6 +1,5 @@
-
 import Layout from "@/components/Layout";
-import { BookOpen, Clock, Award, PenTool, Scale, Star, CheckCircle } from "lucide-react";
+import { BookOpen, Clock, Award, PenTool, Scale, Star, CheckCircle, Brain, ChartBar, Clipboard, Heart, Lightbulb } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Courses = () => {
@@ -290,7 +289,7 @@ const certificateCourses = [
 // Missing icons to be defined
 const Brain = BookOpen; // Placeholder for Brain icon
 const ChartBar = Award; // Placeholder for ChartBar icon
-const ClipboardCheck = CheckCircle; // Placeholder for ClipboardCheck icon
+const ClipboardCheck = Clipboard; // Using Clipboard as a replacement for ClipboardCheck
 const Lightbulb = Star; // Placeholder for Lightbulb icon
 
 export default Courses;
